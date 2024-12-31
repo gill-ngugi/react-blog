@@ -53,38 +53,23 @@ npm start
 ----------------------
 react-blog/
 ├── src/
-
 │   ├── components/
-
 │   │   ├── Post.js
-
 │   │   ├── PostForm.js
-
 │   │   ├── PostList.js
-
 │   │   └── ErrorBoundary.js
-
 │   ├── styles/
-
 │   │   ├── App.css
-
 │   │   ├── Post.css
-
 │   │   └── PostForm.css
-
 │   ├── utils/
-
 │   │   └── validation.js
-
 │   ├── App.js
-
 │   └── index.js
-
 ├── public/
-
 │   └── index.html
-
 └── package.json
+
 
 7. Available Scripts
 npm start: Runs the app in development mode
@@ -94,6 +79,7 @@ npm test: Launches the test runner
 npm run build: Builds the app for production
 
 npm run eject: Ejects from Create React App
+
 
 ---------------------------
 # Getting Started with Create React App

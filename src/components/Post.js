@@ -9,7 +9,7 @@ function Post({ post, onEdit }) {
       <h2>{post.title}</h2>
       <p>{post.content}</p>
       <div className="post-footer">
-        <button 
+        <button
           className="edit-button"
           onClick={() => onEdit(post.id)}
         >
