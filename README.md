@@ -49,29 +49,45 @@ npm start
 
 5. Open http://localhost:3000 to view it in your browser.
 
-6. Project Structure
+## Project Structure
 ----------------------
-react-blog/
-├── src/
-│   ├── components/
-│   │   ├── Post.js
-│   │   ├── PostForm.js
-│   │   ├── PostList.js
-│   │   └── ErrorBoundary.js
-│   ├── styles/
-│   │   ├── App.css
-│   │   ├── Post.css
-│   │   └── PostForm.css
-│   ├── utils/
-│   │   └── validation.js
-│   ├── App.js
-│   └── index.js
-├── public/
-│   └── index.html
-└── package.json
+Here's what each directory and file is responsible for:
 
+src/ - Main source code directory
 
-7. Available Scripts
+components/ - React components
+
+Post.js - Individual blog post component
+
+PostForm.js - Form for creating/editing posts
+
+PostList.js - Component to display list of posts
+
+ErrorBoundary.js - Error handling component
+
+styles/ - CSS styling files
+
+App.css - Main application styles
+
+Post.css - Styles for post component
+
+PostForm.css - Styles for form component
+
+utils/ - Utility functions
+
+validation.js - Form validation logic
+
+App.js - Main application component
+
+index.js - Application entry point
+
+public/ - Static files
+
+index.html - Main HTML file
+
+package.json - Project dependencies and scripts
+
+## Available Scripts
 npm start: Runs the app in development mode
 
 npm test: Launches the test runner
