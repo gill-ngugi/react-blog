@@ -1,0 +1,19 @@
+ /* src/styles/PostList.css */
+ .post-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .no-posts {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    color: #7f8c8d;
+  }
+  
+  @media (max-width: 768px) {
+    .post-list {
+      grid-template-columns: 1fr;
+    }
+  }

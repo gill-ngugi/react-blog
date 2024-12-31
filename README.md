@@ -1,22 +1,12 @@
 # React Blog Application
-
- 
-
 A modern, responsive blog application built with React that allows users to create, read, update, and delete blog posts.
 
- 
-
 ## Features
-
- 
-
 - 📝 Create new blog posts
 
 - 📖 View all posts in a clean, responsive layout
 
 - ✏️ Edit existing posts
-
-- 🗑️ Delete posts
 
 - ✨ Real-time form validation
 
@@ -24,12 +14,7 @@ A modern, responsive blog application built with React that allows users to crea
 
 - 📱 Fully responsive design
 
- 
-
 ## Technologies Used
-
- 
-
 - React 18
 
 - React Router v6
@@ -40,26 +25,18 @@ A modern, responsive blog application built with React that allows users to crea
 
 - Modern JavaScript (ES6+)
 
- 
 
 ## Prerequisites
-
- 
-
 Before running this project, make sure you have:
-
 - Node.js (v14 or higher)
-
 - npm (v6 or higher)
 
- 
+## Author
+Gillian Ngugi
 
 ## Installation
-
- 
-
 1. Clone the repository:
-git clone <repository-url>
+git clone <https://github.com/gill-ngugi/react-blog.git>
 
 2. Navigate to the project directory:
 cd react-blog
@@ -73,6 +50,7 @@ npm start
 5. Open http://localhost:3000 to view it in your browser.
 
 6. Project Structure
+----------------------
 react-blog/
 ├── src/
 
