@@ -33,122 +33,68 @@ class App extends Component {
     }
   }
 
-
-
   handleUpdatePost = (updatedPost) => {
-
     try {
-
       this.setState(prevState => ({
-
         posts: prevState.posts.map(post =>
-
           post.id === updatedPost.id ? updatedPost : post
-
         ),
-
         editing: null,
-
         error: null
-
       }));
-
     } catch (error) {
-
       this.setState({ error: 'Failed to update post' });
-
     }
-
   }
-
-
 
   setEditing = (postId) => {
-
     this.setState({ editing: postId });
-
   }
-
-
 
   render() {
-
     const { posts, editing, error } = this.state;
-
     return (
-
       <Router>
-
         <div className="App">
-
           <nav>
-
             <Link to="/">Home</Link>
-
             <Link to="/new-post">Create Post</Link>
-
           </nav>
 
-
-
           {error && <div className="error-message">{error}</div>}
-
           <ErrorBoundary>
-
             <Routes>
-
               <Route
-
                 path="/"
-
                 element={<PostList posts={posts} onEdit={this.setEditing} />}
-
               />
 
               <Route
-
                 path="/new-post"
-
                 element={
-
                   <PostForm
-
                     onSubmit={this.handleAddPost}
-
                     editingPost={posts.find(post => post.id === editing)}
-
                     onUpdate={this.handleUpdatePost}
-
                   />
-
                 }
-
               />
 
               <Route
-                path = "/edit/:id"
-                element = {
+                path="/edit/:id"
+                element={
                   <PostForm
-                    editingPost = {posts.find(post => post.id === editing)}
-                    onUpdate = {this.handleUpdatePost}
+                    editingPost={posts.find(post => post.id === editing)}
+                    onUpdate={this.handleUpdatePost}
                   />
                 }
-                />
-
+              />
             </Routes>
-
           </ErrorBoundary>
-
         </div>
-
       </Router>
-
     );
-
   }
-
 }
-
-
 
 export default App;
