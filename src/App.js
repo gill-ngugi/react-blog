@@ -1,67 +1,36 @@
 // src/App.js
-
 import React, { Component } from 'react';
-
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
-
 import PostList from './components/PostList';
-
 import PostForm from './components/PostForm';
-
 import ErrorBoundary from './components/ErrorBoundary';
-
 import './styles/App.css';
 
-
-
 class App extends Component {
-
   constructor(props) {
-
     super(props);
-
     this.state = {
-
       posts: [],
-
       editing: null,
-
       error: null
-
     };
-
   }
 
-
-
   handleAddPost = (newPost) => {
-
     try {
-
       const post = {
-
         ...newPost,
-
         id: crypto.randomUUID(),
-
         createdAt: new Date().toISOString()
-
       };
 
       this.setState(prevState => ({
-
         posts: [...prevState.posts, post],
-
         error: null
-
       }));
-
     } catch (error) {
-
       this.setState({ error: 'Failed to add post' });
-
     }
-
   }
 
 
