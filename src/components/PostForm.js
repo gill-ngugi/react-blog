@@ -78,89 +78,50 @@ function PostFormWithRouter({ onSubmit, editingPost, onUpdate }) {
 
       <div className="form-group">
         <textarea
-
           placeholder="Post Content"
-
           value={content}
-
           onChange={(e) => {
-
             setContent(e.target.value);
-
             if (errors.content) setErrors({ ...errors, content: null });
-
           }}
 
           className={errors.content ? 'error' : ''}
-
         />
 
         {errors.content && <div className="error-message">{errors.content}</div>}
-
       </div>
-
- 
 
       {errors.submit && <div className="error-message">{errors.submit}</div>}
 
- 
-
       <div className="form-buttons">
-
         <button type="submit" disabled={isSubmitting}>
-
           {isSubmitting ? 'Submitting...' : editingPost ? 'Update Post' : 'Add Post'}
-
         </button>
 
         <button type="button" onClick={handleCancel} className="cancel-button">
-
           Cancel
-
         </button>
 
       </div>
-
     </form>
-
   );
-
 }
-
- 
 
 PostFormWithRouter.propTypes = {
-
   onSubmit: PropTypes.func.isRequired,
-
   onUpdate: PropTypes.func.isRequired,
-
   editingPost: PropTypes.shape({
-
     id: PropTypes.string,
-
     title: PropTypes.string,
-
     content: PropTypes.string
-
   })
-
 };
 
- 
-
 // Wrapper component to handle routing
-
 function PostForm(props) {
-
   return <PostFormWithRouter {...props} />;
-
 }
 
- 
-
-PostForm.propTypes = PostFormWithRouter.propTypes;
-
- 
+PostForm.propTypes = PostFormWithRouter.propTypes; 
 
 export default PostForm;
