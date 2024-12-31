@@ -122,6 +122,6 @@ function PostForm(props) {
   return <PostFormWithRouter {...props} />;
 }
 
-PostForm.propTypes = PostFormWithRouter.propTypes; 
+PostForm.propTypes = PostFormWithRouter.propTypes;
 
 export default PostForm;

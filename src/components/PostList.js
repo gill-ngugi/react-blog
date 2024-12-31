@@ -1,63 +1,32 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
-
 import Post from './Post';
-
 import '../styles/PostList.css';
-
 import { useNavigate } from 'react-router-dom';
 
- 
-
 // Wrap the main component with a router-aware component
-
 const PostListWithRouter = ({ posts, onEdit }) => {
-
   const navigate = useNavigate();
-
- 
-
   const handleEdit = (postId) => {
-
     onEdit(postId);
-
     navigate(`/edit/${postId}`);
-
   };
 
- 
-
   if (posts.length === 0) {
-
     return <div className="no-posts">No posts yet. Create one!</div>;
-
   }
 
- 
-
   return (
-
     <div className="post-list">
-
       {posts.map(post => (
-
         <Post
-
           key={post.id}
-
           post={post}
-
           onEdit={() => handleEdit(post.id)}
-
         />
-
       ))}
-
     </div>
-
   );
-
 };
 
  
