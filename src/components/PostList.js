@@ -29,46 +29,24 @@ const PostListWithRouter = ({ posts, onEdit }) => {
   );
 };
 
- 
-
 // Original PropTypes remain the same
-
 PostListWithRouter.propTypes = {
-
   posts: PropTypes.arrayOf(
-
     PropTypes.shape({
-
       id: PropTypes.string.isRequired,
-
       title: PropTypes.string.isRequired,
-
       content: PropTypes.string.isRequired
-
     })
-
   ).isRequired,
-
   onEdit: PropTypes.func.isRequired
-
 };
 
- 
-
 // Create a wrapper component to handle the case where we can't use hooks directly
-
 function PostList(props) {
-
   return <PostListWithRouter {...props} />;
-
 }
-
- 
 
 PostList.propTypes = PostListWithRouter.propTypes;
 
- 
-
 export default PostList;
 
- 
